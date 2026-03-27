@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="PawsPlace – your neighbourhood pet shop offering pets, food, accessories and grooming services." />
+  <title>PawsPlace – Pet Shop</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Skip navigation link for keyboard/screen-reader users -->
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- ===== HEADER / NAV ===== -->
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="#" class="logo" aria-label="PawsPlace home">
+        <span class="logo-icon" aria-hidden="true">🐾</span>
+        <span class="logo-text">PawsPlace</span>
+      </a>
+
+      <nav aria-label="Primary navigation">
+        <button
+          class="nav-toggle"
+          aria-expanded="false"
+          aria-controls="primary-nav"
+          aria-label="Toggle navigation menu"
+        >
+          <span class="hamburger-bar" aria-hidden="true"></span>
+          <span class="hamburger-bar" aria-hidden="true"></span>
+          <span class="hamburger-bar" aria-hidden="true"></span>
+        </button>
+
+        <ul id="primary-nav" class="nav-list" role="list">
+          <li><a href="#pets" class="nav-link">Our Pets</a></li>
+          <li><a href="#categories" class="nav-link">Categories</a></li>
+          <li><a href="#services" class="nav-link">Services</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <button
+        class="cart-btn"
+        aria-label="Shopping cart, 0 items"
+        id="cart-btn"
+        aria-haspopup="dialog"
+      >
+        <span class="cart-icon" aria-hidden="true">🛒</span>
+        <span class="cart-count" id="cart-count" aria-live="polite" aria-atomic="true">0</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ===== MAIN ===== -->
+  <main id="main-content">
+
+    <!-- HERO -->
+    <section class="hero" aria-label="Welcome banner">
+      <div class="container hero-inner">
+        <div class="hero-text">
+          <h1>Find Your <span class="accent">Perfect</span> Companion</h1>
+          <p>Adorable pets, premium food, accessories, and expert grooming – all in one place.</p>
+          <a href="#pets" class="btn btn-primary">Meet Our Pets</a>
+          <a href="#services" class="btn btn-secondary">Our Services</a>
+        </div>
+        <div class="hero-image" aria-hidden="true">
+          <div class="hero-emoji-stack">
+            <span class="hero-emoji">🐶</span>
+            <span class="hero-emoji">🐱</span>
+            <span class="hero-emoji">🐰</span>
+            <span class="hero-emoji">🐦</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CATEGORIES -->
+    <section id="categories" class="categories-section" aria-labelledby="categories-heading">
+      <div class="container">
+        <h2 id="categories-heading" class="section-title">Browse by Category</h2>
+        <ul class="categories-grid" role="list">
+          <li>
+            <button class="category-card active" data-filter="all" aria-pressed="true">
+              <span class="category-icon" aria-hidden="true">🐾</span>
+              <span>All Pets</span>
+            </button>
+          </li>
+          <li>
+            <button class="category-card" data-filter="dog" aria-pressed="false">
+              <span class="category-icon" aria-hidden="true">🐶</span>
+              <span>Dogs</span>
+            </button>
+          </li>
+          <li>
+            <button class="category-card" data-filter="cat" aria-pressed="false">
+              <span class="category-icon" aria-hidden="true">🐱</span>
+              <span>Cats</span>
+            </button>
+          </li>
+          <li>
+            <button class="category-card" data-filter="rabbit" aria-pressed="false">
+              <span class="category-icon" aria-hidden="true">🐰</span>
+              <span>Rabbits</span>
+            </button>
+          </li>
+          <li>
+            <button class="category-card" data-filter="bird" aria-pressed="false">
+              <span class="category-icon" aria-hidden="true">🐦</span>
+              <span>Birds</span>
+            </button>
+          </li>
+          <li>
+            <button class="category-card" data-filter="fish" aria-pressed="false">
+              <span class="category-icon" aria-hidden="true">🐠</span>
+              <span>Fish</span>
+            </button>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- PETS LISTING -->
+    <section id="pets" class="pets-section" aria-labelledby="pets-heading">
+      <div class="container">
+        <h2 id="pets-heading" class="section-title">Our Pets</h2>
+        <p class="section-subtitle">Every pet deserves a loving home. Could yours be next?</p>
+
+        <div class="pets-grid" id="pets-grid" role="list" aria-live="polite" aria-relevant="additions removals">
+          <!-- Populated by JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services" class="services-section" aria-labelledby="services-heading">
+      <div class="container">
+        <h2 id="services-heading" class="section-title">Our Services</h2>
+        <ul class="services-grid" role="list">
+          <li class="service-card">
+            <span class="service-icon" aria-hidden="true">✂️</span>
+            <h3>Grooming</h3>
+            <p>Professional grooming for all breeds. Bath, trim, nail clipping and more.</p>
+          </li>
+          <li class="service-card">
+            <span class="service-icon" aria-hidden="true">🏥</span>
+            <h3>Vet Consultations</h3>
+            <p>On-site vet available Monday–Saturday for check-ups and vaccinations.</p>
+          </li>
+          <li class="service-card">
+            <span class="service-icon" aria-hidden="true">🎓</span>
+            <h3>Training</h3>
+            <p>Puppy classes and obedience training with certified trainers.</p>
+          </li>
+          <li class="service-card">
+            <span class="service-icon" aria-hidden="true">🏡</span>
+            <h3>Pet Boarding</h3>
+            <p>Safe and comfortable overnight stays when you need to be away.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="contact-section" aria-labelledby="contact-heading">
+      <div class="container contact-inner">
+        <div class="contact-info">
+          <h2 id="contact-heading" class="section-title">Visit Us</h2>
+          <address>
+            <p><span aria-hidden="true">📍</span> 42 Pawsome Street, Tel Aviv, IL</p>
+            <p><span aria-hidden="true">📞</span> <a href="tel:+97212345678">+972 12-345-678</a></p>
+            <p><span aria-hidden="true">✉️</span> <a href="mailto:hello@pawsplace.com">hello@pawsplace.com</a></p>
+          </address>
+          <p class="hours"><strong>Hours:</strong><br />
+            Sun–Thu: 09:00–19:00<br />
+            Fri: 09:00–14:00<br />
+            Sat: Closed
+          </p>
+        </div>
+
+        <form class="contact-form" novalidate aria-label="Send us a message">
+          <h3 class="form-title">Send a Message</h3>
+
+          <div class="form-group">
+            <label for="name">Full Name <span class="required" aria-label="required">*</span></label>
+            <input type="text" id="name" name="name" autocomplete="name" required
+              aria-required="true" placeholder="Jane Smith" />
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email Address <span class="required" aria-label="required">*</span></label>
+            <input type="email" id="email" name="email" autocomplete="email" required
+              aria-required="true" placeholder="jane@example.com" />
+          </div>
+
+          <div class="form-group">
+            <label for="message">Message <span class="required" aria-label="required">*</span></label>
+            <textarea id="message" name="message" rows="4" required
+              aria-required="true" placeholder="How can we help you?"></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary">Send Message</button>
+          <p class="form-success" id="form-success" role="alert" aria-live="assertive" hidden>
+            ✅ Thanks! We'll be in touch soon.
+          </p>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-inner">
+      <p class="footer-logo">
+        <span aria-hidden="true">🐾</span> PawsPlace
+      </p>
+      <p class="footer-copy">&copy; <span id="year">2026</span> PawsPlace. All rights reserved.</p>
+      <nav aria-label="Footer navigation">
+        <ul class="footer-nav" role="list">
+          <li><a href="#pets">Our Pets</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
+
+  <!-- CART DIALOG -->
+  <div
+    id="cart-dialog"
+    class="cart-overlay hidden"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="cart-dialog-title"
+  >
+    <div class="cart-panel">
+      <div class="cart-header">
+        <h2 id="cart-dialog-title">Shopping Cart</h2>
+        <button class="cart-close-btn" id="cart-close-btn" aria-label="Close shopping cart">✕</button>
+      </div>
+      <ul class="cart-items" id="cart-items" role="list" aria-label="Items in cart">
+        <!-- Populated by JS -->
+      </ul>
+      <div class="cart-footer">
+        <p class="cart-total">Total: <strong id="cart-total">$0.00</strong></p>
+        <button class="btn btn-primary" id="checkout-btn">Checkout</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
