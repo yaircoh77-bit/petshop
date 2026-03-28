@@ -5,10 +5,10 @@
 
 /* ---------- CSS Custom Properties ---------- */
 :root {
-  --clr-primary:    #f97316;   /* orange */
+  --clr-primary:    #f97316;
   --clr-primary-dk: #c2530a;
-  --clr-secondary:  #1e3a5f;   /* deep navy */
-  --clr-accent:     #fbbf24;   /* amber */
+  --clr-secondary:  #1e3a5f;
+  --clr-accent:     #fbbf24;
   --clr-bg:         #fffdf9;
   --clr-surface:    #ffffff;
   --clr-text:       #1f2937;
@@ -188,7 +188,6 @@ button {
   min-height: 64px;
 }
 
-/* Logo */
 .logo {
   display: flex;
   align-items: center;
@@ -207,7 +206,6 @@ button {
   color: var(--clr-primary);
 }
 
-/* Nav */
 .nav-toggle {
   display: flex;
   flex-direction: column;
@@ -277,7 +275,6 @@ button {
   text-decoration: none;
 }
 
-/* Cart button */
 .cart-btn {
   display: flex;
   align-items: center;
@@ -433,8 +430,7 @@ button {
   transform: translateY(-2px);
 }
 
-.category-card.active,
-.category-card[aria-pressed="true"] {
+.category-card.active {
   border-color: var(--clr-primary);
   background-color: var(--clr-primary);
   color: #fff;
@@ -563,12 +559,6 @@ button {
   color: #92400e;
 }
 
-/* Hidden cards */
-.pet-card.hidden {
-  display: none;
-}
-
-/* Empty state */
 .no-results {
   grid-column: 1 / -1;
   text-align: center;
@@ -678,7 +668,6 @@ button {
   color: var(--clr-muted);
 }
 
-/* Form */
 .contact-form {
   background-color: var(--clr-surface);
   border-radius: var(--radius-lg);
@@ -814,10 +803,6 @@ button {
   align-items: stretch;
 }
 
-.cart-overlay.hidden {
-  display: none;
-}
-
 .cart-panel {
   background-color: var(--clr-surface);
   width: min(400px, 100vw);
@@ -930,8 +915,6 @@ button {
 /* ============================================================
    UTILITY / PRINT
    ============================================================ */
-
-/* Screen-reader only (visually hidden but accessible) */
 .sr-only {
   position: absolute;
   width: 1px;
@@ -943,6 +926,7 @@ button {
   white-space: nowrap;
   border: 0;
 }
+
 @media (prefers-reduced-motion: reduce) {
   .hero-emoji,
   .btn,
